@@ -1,0 +1,165 @@
+@import "var";
+@import"mixin";
+@import"extand";
+*{
+    p{
+    font-size: 16px;
+    font-family: $fontHeader;
+    line-height: 150%;
+    padding-top: 20px;;
+}}
+.container{
+    margin: auto;
+    width: 85%;
+}
+body{
+    background-color:$Background;
+}
+.header{
+    overflow: hidden;
+    padding: $padding;
+    font-family:$fontHeader;
+    .navbr{
+         h1{ color:$White;
+        float: left; }
+        ul{
+            padding: 10px;
+            @extend %ul;
+            li{ @extend %li;
+                padding: 15px;
+                a{
+                    @extend %a
+                 }}}}}
+.slider{
+    padding: 80px;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+    color: $White;
+    span{    font-size: 32px;
+}
+    p{
+        font-size: 16px;
+        font-family: $fontHeader;
+        line-height: 150%;
+        padding-top: 20px;;
+    }
+    img{
+        width: 100%;
+    margin: auto;
+    padding-bottom: 50px;
+    }
+    button{
+        border-style: none;
+        @extend %bt;
+        &:hover{
+            border-style: ridge;
+        }
+        &:focus{
+            outline:none;
+            border-style: ridge;
+        }}}
+#testimonial{
+    padding: 80px;
+    clear: both;
+    .item{
+        overflow: hidden;
+        color: $White;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        .select{
+            position: relative;
+            margin: auto;
+            text-align: center;
+            width: 50%;
+
+}}}
+
+.about{
+    padding: 80px;
+    overflow: hidden;
+    color: $White;
+    .img{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        div{
+            position: relative;
+            h1{
+                padding-top: 100px;
+            }
+            a{
+                color: cyan;
+            }}}}
+#customer{
+    padding: 80px;
+    overflow: hidden;
+    .test{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        color: $White;
+        .op{
+            position: relative;
+            background-color: $testimonialsBackground;
+            padding: 15px;
+            margin: 15px;
+            img{
+                float: left;
+                width:15%;
+                border-radius: 50%;
+                padding-right: 5px;
+            }
+            h5{
+                display: inline;
+            }}}}
+#contcat{
+    overflow: hidden;
+    padding-bottom: 50px;
+    .email{
+        text-align: center;
+        padding: 15px;
+        margin: auto;
+        width: 50%;
+        color: $White;
+        background-color: $testimonialsBackground;
+        form{
+            padding: 15px;
+            input{
+                border-radius: 30px;
+                background-color:$White;
+                color: #eee;
+                line-height: 50%;
+                height: 30px;
+                width: 300px;
+            }
+            button{
+                @extend %bt
+            }}}}
+footer{
+    overflow: hidden;
+    background-color: $footerBackground;
+    color: $White;
+    .container{
+    .foot{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        div{
+            .so{float: right;
+                a{color: $White;}
+                }
+            padding: 15px;
+            position: relative;
+            img{
+                float: left;
+                padding-top: 15px;
+                padding-right: 25px;
+                }
+            p{padding-left: 35px;}
+            ul{
+                list-style: none;
+                padding: 10px;
+                line-height: 1.5em;
+                a{
+                    text-decoration: none;
+                    color: $White;
+                }}}}}}
+@import "media";
